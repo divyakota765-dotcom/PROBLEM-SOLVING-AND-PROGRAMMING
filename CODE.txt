@@ -1,0 +1,22 @@
+#  According to the problem,the function display_menu should not return any value.It should just display the menu
+def display_menu():
+  print("1. Convert GBP to Rupees(INR)")
+  print("2. Convert INR to British Pound Sterling (GBP)")
+  print("3. Invalid")
+#The currencies shown are taken and return the converted value
+def GBP_to_INR(value):
+  return value*106.27
+def INR_to_GBP(value):
+  return value*0.0094
+while True:
+  display_menu()
+  choice=int(input())
+  if choice==3:
+    print("Invalid!")
+    break
+  else:
+    amount=float(input("Enter an amount in GBP Pounds: "))
+    if choice==1:
+      print(amount,"GBP",GBP_to_INR(amount),"INR")
+    elif choice==2:
+      print(amount,"INR",INR_to_GBP(amount),"GBP")
